@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex Website Using html css</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <section>
+        <img src="img/first.jpg" alt="sudin" id="first">
+        <img src="img/last.png" alt="sudin" id="last">
+        <h1 id="text">parallax</h1>
+    </section>
+
+    <div class="ab-text">
+        <div class="heading">
+            <h2>photography</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rem dolore,<br> soluta atque ab eaque! Aperiam voluptatem dolorem rerum reprehenderit consequatur,<br> fuga nihil, deleniti blanditiis mollitia nam facilis natus odit.</p>
+        </div>
+
+        <div class="conteiner">
+            <div class="box box1">
+                <div class="in">
+                    <p>like</p>
+                </div>
+            </div>
+
+            <div class="box box2">
+                <div class="in">
+                    <p>comment</p>
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="in">
+                    <p>shere&</p>
+                </div>
+            </div>  
+         
+
+            <div class="box box4">
+                <div class="in">
+                    <p>subscribe</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p>@ 2022. Design with by Sudin.</p>
+        </div>
+    </div>
+
+    <script>
+        let first = document.getElementById("first");
+        let last = document.getElementById("last");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            first.style.top = value * 0.7 + 'px';
+            last.style.bottom = value * 0.5 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+    
+</body>
+</html>
